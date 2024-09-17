@@ -658,7 +658,7 @@ def run_task_generate():
                 "-sWASM_ASYNC_COMPILATION=0",
                 "-sWARN_ON_UNDEFINED_SYMBOLS=1",
                 "-sERROR_ON_UNDEFINED_SYMBOLS=0",
-                "-SUPPORT_LONGJMP=1",
+                "-sSUPPORT_LONGJMP=1",
                 "-fwasm-exceptions",
             ]
 
