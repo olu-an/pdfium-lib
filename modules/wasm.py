@@ -255,8 +255,9 @@ gcc_toolchain("emscripten") {
   ld = cxx
   nm = "emnm"
 
-  extra_cflags = "-Wno-unknown-warning-option"
-  extra_cxxflags = "-Wno-unknown-warning-option"
+  extra_cflags = "-Wno-unknown-warning-option -fwasm-exceptions -sSUPPORT_LONGJMP=wasm"
+  extra_cxxflags = "-Wno-unknown-warning-option -fwasm-exceptions -sSUPPORT_LONGJMP=wasm"
+  extra_ldflags = "-fwasm-exceptions -sSUPPORT_LONGJMP=wasm"
 
   toolchain_args = {
     current_cpu = "wasm"
