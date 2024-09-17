@@ -654,6 +654,12 @@ def run_task_generate():
                 "-std=c++11",
                 "-Wall",
                 "--no-entry",
+                "-sSTANDALONE_WASM=1",
+                "-sWASM_ASYNC_COMPILATION=0",
+                "-sWARN_ON_UNDEFINED_SYMBOLS=1",
+                "-sERROR_ON_UNDEFINED_SYMBOLS=0",
+                "-SUPPORT_LONGJMP=1",
+                "-fwasm-exceptions",
             ]
 
             # Generate UMD (CommonJS + AMD) module and .wasm file
